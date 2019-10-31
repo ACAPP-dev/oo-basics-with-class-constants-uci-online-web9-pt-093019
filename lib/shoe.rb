@@ -20,7 +20,7 @@ class Shoe
 end
 
 Benchmark.bmbm do |x|
-  x.report("detect") {10_000.times{(1..10000)to_a.detect{|number| number == 9999}}}
-  x.report("find") {10_000.times{(1..10000)to_a.find{|number| number == 9999}}}
-  x.report("include") {10_000.times{(1..10000)to_a.include?(9999)}
+  x.report("detect") {10_000.times{(1..10000).to_a.detect{|number| number == 9999}}}
+  x.report("find") {10_000.times{(1..10000).to_a.find{|number| number == 9999}}}
+  x.report("include") {10_000.times{(1..10000).to_a.include?(9999)}
 end
